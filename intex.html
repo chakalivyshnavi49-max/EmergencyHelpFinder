@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Help Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="header">
+    🚨 Emergency Help Finder
+  </div>
+  
+  <div class="card">
+  <h3>Login</h3>
+
+  <select id="role">
+    <option value="">Select Role</option>
+    <option value="Hospital">Hospital</option>
+    <option value="Police">Police</option>
+    <option value="Fire">Fire Station</option>
+    <option value="Helper">Emergency Helper</option>
+  </select>
+
+  <button onclick="login()">Login</button>
+</div>
+
+  <div class="card">
+    <h2>Describe Emergency</h2>
+    <input type="text" id="emergencyInput" placeholder="e.g. accident, fire...">
+    <button onclick="startVoice()">🎤 Speak Emergency</button>
+    <button class="sos-btn" onclick="sendSOS()">🆘 SOS Alert</button>
+    <button onclick="predictEmergency()">Find Help</button>
+  </div>
+
+  <div class="card">
+    <button class="location-btn" onclick="getLocation()">📍 Get Location</button>
+    <p id="output"></p>
+    <div id="mapContainer"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
